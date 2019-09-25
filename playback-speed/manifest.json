@@ -1,0 +1,58 @@
+{
+  
+  "name": "Playback speed",
+  "description": "Make possible speed up or slow down playing video",
+  "version": "1.0",
+  "manifest_version": 2,
+  
+  "icons": { 
+    "16":  "images/speedometer-16px.png",
+    "32":  "images/speedometer-32px.png",
+    "64":  "images/speedometer-64px.png",
+    "128": "images/speedometer-128px.png",
+    "256": "images/speedometer-256px.png",
+    "512": "images/speedometer-512px.png"
+  },
+
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  
+  "content_scripts": [
+    {
+        "matches": ["http://*/*","https://*/*"],
+        "js": ["contentScript.js"],
+        "all_frames": true
+    }
+  ],
+  
+  "browser_action": {
+    "default_title": "Open hotkeys bindings"
+  },
+
+  "permissions":[ "tabs"] ,
+  
+  "commands": {
+    
+    "video-speed-up": {
+      "suggested_key": {
+        "default": "Alt+PageUp"
+      },
+      "description": "Speed up video"
+    },
+    "video-slow-down": {
+      "suggested_key": {
+        "default": "Alt+PageDown"
+      },
+      "description": "Slow down video"
+    },
+    "video-max-speed": {
+      "suggested_key": {
+        "default": "Alt+End"
+      },
+      "description": "Play at max speed"
+    }
+
+  }
+
+}

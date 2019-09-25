@@ -1,0 +1,56 @@
+{
+  
+  "name": "Tabs navigation",
+  "description": "Allow custom tab navigation",
+  "version": "1.0",
+  "manifest_version": 2,
+  
+  "icons": { 
+    "16":  "images/tabs-navigation-16px.png",
+    "32":  "images/tabs-navigation-32px.png",
+    "64":  "images/tabs-navigation-64px.png",
+    "128": "images/tabs-navigation-128px.png",
+    "256": "images/tabs-navigation-256px.png",
+    "512": "images/tabs-navigation-512px.png"
+  },
+
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+
+  "browser_action": {
+    "default_title": "Open hotkeys bindings"
+  },
+
+  "permissions":[ "tabs"] ,
+  
+  "commands": {
+
+    "next-tab": {
+      "suggested_key": {
+        "default": "Alt+Up"
+      },
+      "description": "Next tab"
+    },
+    "previous-tab": {
+      "suggested_key": {
+        "default": "Alt+Down"
+      },
+      "description": "Previous tab"
+    },
+
+    "go-forward": {
+      "suggested_key": {
+        "default": "Alt+Shift+Delete"
+      },
+      "description": "Go forward"
+    },
+    "go-back": {
+      "suggested_key": {
+        "default": "Alt+Delete"
+      },
+      "description": "Go back"
+    }
+  }
+
+}
