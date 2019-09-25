@@ -3,19 +3,23 @@
 
 Welcome :)
 
-### Tabs navigation
+## Tabs navigation
 
 Allow override hotkeys for navigating in browser
   
   * Switch to left/right tab
   * Go back/forward
 
-### Playback speed
+## Playback speed
 
 Allows speed up or slow down currently playing video
+
+## Info
 
 ### Credits
 
 Icons taken from [Elegant Themes](http://www.elegantthemes.com/blog/freebie-of-the-week/beautiful-flat-icons-for-free)
 
-### MIT License
+### License
+
+MIT
