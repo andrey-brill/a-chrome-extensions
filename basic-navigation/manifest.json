@@ -1,8 +1,8 @@
 {
 
   "name": "Shortcuts for basic navigation",
-  "description": "Allow to natively specify shortcuts for basic navigation in Chrome",
-  "version": "1.0",
+  "description": "Allows to natively specify shortcuts for basic navigation in Chrome",
+  "version": "1.1",
   "manifest_version": 2,
 
   "icons": {
