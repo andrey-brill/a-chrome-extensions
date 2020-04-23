@@ -1,17 +1,17 @@
 {
-  
-  "name": "Tabs navigation",
-  "description": "Allow custom tab navigation",
+
+  "name": "Shortcuts for basic navigation",
+  "description": "Allow to natively specify shortcuts for basic navigation in Chrome",
   "version": "1.0",
   "manifest_version": 2,
-  
-  "icons": { 
-    "16":  "images/tabs-navigation-16px.png",
-    "32":  "images/tabs-navigation-32px.png",
-    "64":  "images/tabs-navigation-64px.png",
-    "128": "images/tabs-navigation-128px.png",
-    "256": "images/tabs-navigation-256px.png",
-    "512": "images/tabs-navigation-512px.png"
+
+  "icons": {
+    "16":  "images/icon-16px.png",
+    "32":  "images/icon-32px.png",
+    "64":  "images/icon-64px.png",
+    "128": "images/icon-128px.png",
+    "256": "images/icon-256px.png",
+    "512": "images/icon-512px.png"
   },
 
   "background": {
@@ -19,11 +19,11 @@
   },
 
   "browser_action": {
-    "default_title": "Open hotkeys bindings"
+    "default_title": "Open shortcuts bindings"
   },
 
   "permissions":[ "tabs"] ,
-  
+
   "commands": {
 
     "next-tab": {

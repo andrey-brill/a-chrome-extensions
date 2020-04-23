@@ -2,37 +2,37 @@
 
 const commands = {
 
-  'next-tab': function() {
+  'next-tab': function () {
     switchTab(+1);
   },
   'previous-tab': function() {
     switchTab(-1);
   },
 
-  'go-forward': function() {
+  'go-forward': function () {
     chrome.tabs.goForward();
   },
-  'go-back': function() {
+  'go-back': function () {
     chrome.tabs.goBack();
   }
-  
+
 }
 
-chrome.commands.onCommand.addListener(function(command) {
+chrome.commands.onCommand.addListener(function (command) {
   commands[command]();
 });
 
-chrome.browserAction.onClicked.addListener(function() {
+chrome.browserAction.onClicked.addListener(function () {
   chrome.tabs.create({'url': 'chrome://extensions/shortcuts'});
 });
 
 function switchTab (indexDelta) {
-  onActiveTab( function (activeTab) {
+  onActiveTab(function (activeTab) {
     chrome.tabs.query({ currentWindow: true, index: (activeTab.index + indexDelta) }, function (nextTabs) {
       if (nextTabs.length === 1) {
         chrome.tabs.update(nextTabs[0].id, { active: true });
       }
-    });  
+    });
   });
 }
 
@@ -41,4 +41,3 @@ function onActiveTab (handler) {
     if (tabsArray.length === 1) handler(tabsArray[0]);
   });
 }
-
